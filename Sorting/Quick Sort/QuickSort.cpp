@@ -29,7 +29,7 @@ void print(int a[], int n)
 
 void quickSort(int a[], int first, int last)
 {
-    int key, temp, i, j;
+    int key, i, j;
 
     if (first < last)
     {
