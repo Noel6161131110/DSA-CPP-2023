@@ -28,7 +28,10 @@ void Selectionsort(int array[], int n)
                 min = k;
             }
         }
-        Swap(&array[i], &array[min]); // addresses of the the elements to be swapped are passed
+        if (min != i)
+        {
+            Swap(&array[i], &array[min]); // addresses of the the elements to be swapped are passed
+        } 
     }
 }
 
