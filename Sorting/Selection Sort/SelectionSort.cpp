@@ -7,6 +7,13 @@ void Swap(int *a, int *b)
     *a = *b;
     *b = temp;
 }
+void Printarray(int array[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        cout << array[i] << endl;
+    }
+}
 
 void Selectionsort(int array[], int n)
 {
@@ -21,17 +28,15 @@ void Selectionsort(int array[], int n)
                 min = k;
             }
         }
-        Swap(&array[i], &array[min]);
+        Swap(&array[i], &array[min]); // addresses of the the elements to be swapped are passed
     }
 }
 
 int main()
 {
-    int array[] = {1, 4, 5, 3, 22, 6};
+    int array[] = {1, 4, 5, 3, 22, 6}; // array of size 6
     Selectionsort(array, 6);
-    for (int i = 0; i < 6; i++)
-    {
-        cout << array[i] << endl;
-    }
+    Printarray(array, 6);
+
     return 0;
 }
